@@ -1,6 +1,8 @@
 # Python
 server/__pycache__/
 server/.venv/
+server/history/*
+server/static/*
 
 # NodeJS
 client/node_modules/
