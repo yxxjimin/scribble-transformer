@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color);
+}
+
+:root {
+  --yonsei-blue: #003876;
+  --viva-magenta: #BE3455;
+  --dark-background: #1F2023;
+  --light-background: #232426;
+  --light-hover: #4D4E50;
+  --button-color: #5858DE;
+  --button-hover: #7373E2;
+  --border-color: #303236;
+  --font-color: #D5D7D9;
+}
+
+.heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark-background);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 500px; */
+  gap: 10px;
+  padding: 10px;
+  max-width: 1050px;
+}
+
+#instream {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section {
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid var(--gray);
+}
+
+.menu {
+  width: 210px;
+  padding: 15px 22px 0;
+  background-color: var(--light-background);
+  border: 1px solid var(--border-color);
+}
+
+.menu .row {
+  margin-bottom: 20px;
+}
+
+.board {
+  width: 100%;
+  height: 500px;
+  width: 500px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.board canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.row .options .selected span {
+  color: var(--button-color);
+}
+
+.option:is(:hover) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span, label) {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.option:is(:hover) :where(span, label) {
+  color: var(--light-hover);
+}
+
+.option #size-slider {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+
+.colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors .option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+
+.colors .option:nth-child(1) {
+  background: #FFF;
+  border: 1px solid #BFBFBF;
+}
+
+.colors .option:nth-child(2) {
+  background: #000;
+  border: 1px solid var(--font-color);
+}
+
+.colors .option:nth-child(3) {
+  background: var(--viva-magenta);
+  border: 1px solid var(--font-color);
+}
+
+.colors .option:nth-child(4) {
+  background: var(--yonsei-blue);
+  border: 1px solid var(--font-color);
+}
+
+.colors .option .selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #FFF;
+  transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child .selected::before {
+  border-color: #CCC;
+}
+
+.buttons button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons .clear-btn {
+  border: 1px solid var(--light-hover);
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: var(--light-hover);
+}
+
+.buttons .save-btn {
+  background: var(--button-color);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+  background: var(--button-hover);
+}
+
+#outstream {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFF;
+  border-radius: 7px;
+  border: 1px solid var(--border-color);
+  padding: 10px 0px 10px 0px;
+  background-color: var(--light-background);
+}
+
+#outstream img {
+  width: 300px;
+  height: 300px;
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+}
+
+.caption {
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0px 10px 0px;
+}
